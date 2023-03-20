@@ -1,4 +1,13 @@
-@import url("font-awesome.min.css");
+:root{
+  --primary : #fff;
+  --secondary : #004585;
+  --onPrimary : #2c2c2c;
+  --onSecondary : #fff;
+  --light: #dedede;
+}
+
+/*==================[common style]================*/
+
 body {
   font-family: "Poppins", sans-serif;
   color: #000000;
@@ -97,22 +106,20 @@ body {
   margin: 0 auto;
 }
 
-.custom_nav-container .navbar-nav .nav-item .nav-link {
+.app-nav-bar .navbar-nav .nav-item .nav-link {
   padding: 45px 15px 15px;
-  color: #000000;
+  color: var(--onPrimary);
   text-align: center;
   position: relative;
   text-transform: uppercase;
 }
 
-.custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-container .navbar-nav .nav-item.active .nav-link {
-  background-color: #56bca4;
-  color: #ffffff;
+.app-nav-bar .navbar-nav .nav-item:hover .nav-link,
+.app-nav-bar .navbar-nav .nav-item.active .nav-link {
+  background-color: var(--secondary);
+  color: var(--onSecondary);
 }
 
-.custom_nav-container .form-inline {
-  padding-top: 30px;
-}
 
 a,
 a:hover,
@@ -141,25 +148,15 @@ a:focus {
           align-items: center;
 }
 
-.custom_nav-container .nav_search-btn {
-  border: none;
-}
 
 .navbar-brand {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-.navbar-brand h3 {
-  color: #000000;
+.navbar-brand h2 {
+  color: var(--onPrimary);
   font-weight: bold;
   text-transform: uppercase;
   margin: 0;
@@ -172,12 +169,13 @@ a:focus {
   margin-top: -10px;
 }
 
-.custom_nav-container {
+.app-nav-bar {
   z-index: 99999;
   padding: 0;
+  border-bottom: 1px solid var(--light);
 }
 
-.custom_nav-container .navbar-toggler {
+.app-nav-bar .navbar-toggler {
   padding: 0;
   width: 37px;
   height: 42px;
@@ -186,7 +184,7 @@ a:focus {
   outline: none;
 }
 
-.custom_nav-container .navbar-toggler span {
+.app-nav-bar .navbar-toggler span {
   display: block;
   width: 35px;
   height: 4px;
@@ -200,7 +198,7 @@ a:focus {
   transition: all .3s;
 }
 
-.custom_nav-container .navbar-toggler span::before, .custom_nav-container .navbar-toggler span::after {
+.app-nav-bar .navbar-toggler span::before, .app-nav-bar .navbar-toggler span::after {
   content: "";
   position: absolute;
   left: 0;
@@ -213,21 +211,21 @@ a:focus {
   transition: all .3s;
 }
 
-.custom_nav-container .navbar-toggler span::after {
+.app-nav-bar .navbar-toggler span::after {
   top: 10px;
 }
 
-.custom_nav-container .navbar-toggler[aria-expanded="true"] {
+.app-nav-bar .navbar-toggler[aria-expanded="true"] {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
 
-.custom_nav-container .navbar-toggler[aria-expanded="true"] span {
+.app-nav-bar .navbar-toggler[aria-expanded="true"] span {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.custom_nav-container .navbar-toggler[aria-expanded="true"] span::before, .custom_nav-container .navbar-toggler[aria-expanded="true"] span::after {
+.app-nav-bar .navbar-toggler[aria-expanded="true"] span::before, .app-nav-bar .navbar-toggler[aria-expanded="true"] span::after {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   top: 0;
@@ -683,109 +681,56 @@ a:focus {
 
 .map_section .map {
   height: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
 
 .map_section .map #googleMap {
   height: 100%;
 }
 
-.info_section {
-  background-color: #1b443b;
-  color: #ffffff;
+.app-footer-content {
+  background-color: var(--secondary);
+  color: var(--onSecondary);
 }
 
-.info_section h5 {
+.app-footer-content h5 {
   text-transform: uppercase;
   font-weight: 600;
 }
 
-.info_section .info_menu .navbar-nav .nav-item .nav-link {
-  color: #ffffff;
+.app-footer-content .content-menu .navbar-nav .nav-item .nav-link {
+  color:var(--onSecondary);
 }
 
-.info_section .info_news .info_contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.app-footer-content .content-address .content-contact {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.info_section .info_news .info_contact a {
-  color: #ffffff;
-  margin-bottom: 5px;
+.app-footer-content .content-address .content-contact a {
+  color: var(--onSecondary);
+  margin-bottom: 15px;
 }
 
-.info_section .info_news .info_contact a i {
+.app-footer-content .content-address .content-contact a i {
   margin-right: 5px;
 }
 
-.info_section .info_news form {
-  margin-top: 15px;
+
+/*app footer*/
+.app-footer {
+  background-color:var(--secondary);
 }
 
-.info_section .info_news form input {
-  width: 100%;
-  border: none;
-  outline: none;
-  padding: 8px 10px;
-  background-color: #e0e0e0;
-}
-
-.info_section .info_news form input::-webkit-input-placeholder {
-  color: #acaeae;
-}
-
-.info_section .info_news form input:-ms-input-placeholder {
-  color: #acaeae;
-}
-
-.info_section .info_news form input::-ms-input-placeholder {
-  color: #acaeae;
-}
-
-.info_section .info_news form input::placeholder {
-  color: #acaeae;
-}
-
-.info_section .info_news form button {
-  display: inline-block;
-  padding: 7px 45px;
-  background-color: #56bca4;
-  border: 1px solid #56bca4;
-  color: #ffffff;
-  margin-top: 15px;
-}
-
-.info_section .info_news form button:hover {
-  background-color: transparent;
-  color: #56bca4;
-}
-
-/* footer section*/
-.footer_section {
-  background-color: #1b443b;
-}
-
-.footer_section p {
+.app-footer p {
   padding: 20px 0;
-  color: #ffffff;
+  color: var(--onSecondary);
   margin: 0 auto;
   text-align: center;
-  border-top: 1px solid rgba(224, 224, 224, 0.8);
+  border-top: 1px solid var(--light);
 }
 
-.footer_section p a {
+.app-footer p a {
   color: inherit;
 }
-
-/* end footer section*/
-/*# sourceMappingURL=style.css.map */
