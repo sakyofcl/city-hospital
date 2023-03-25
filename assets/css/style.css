@@ -3,7 +3,9 @@
   --secondary : #004585;
   --onPrimary : #2c2c2c;
   --onSecondary : #fff;
-  --light: #dedede;
+  --light: #ebebeb;
+  --lightGray : #f7f7f7;
+  --darkGray : #aeb4b9;
 }
 
 /*==================[common style]================*/
@@ -733,4 +735,376 @@ a:focus {
 
 .app-footer p a {
   color: inherit;
+}
+
+
+
+/*title-flex*/
+.title-flex{
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+.title-flex img{
+  height: 100%;
+  width: 100%;
+}
+
+
+/*about-us-sub-menu*/
+.about-us-sub-menu{
+  height: 100px;
+  width: 100%;
+  background-color: var(--secondary);
+}
+
+/* about-us */
+.about-us {
+  margin-top: 20px;
+}
+.about-us .about-us-title{
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--secondary);
+  margin-bottom: 25px;
+}
+.about-us .about-us-content{
+  text-align: justify;
+  line-height: 25px;
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  color: var(--onPrimary);
+}
+
+.about-us .about-us-hospital-image{
+  height: 450px;
+  width: auto;
+  margin-top: 70px;
+}
+
+.about-us .about-us-video{
+  width: 100%;
+  height: 320px;
+  margin-top: 20px;
+  border: 1px solid var(--light);
+}
+
+.about-us-qoute{
+  margin-top: 20px;
+}
+.about-us-qoute-card .content{
+  background-color: var(--lightGray);
+  border-left: 2px solid var(--secondary);
+  border-right: 2px solid var(--secondary);
+  padding: 30px;
+  color: var(--onPrimary);
+  margin-bottom: 20px;
+}
+
+.bod-title{
+  width: 100%;
+  font-weight: 700;
+  color: var(--secondary);
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.bod-card{
+  width: 100%;
+  display: flex;
+  border: 1px solid var(--light);
+  padding: 10px;
+  height: 160px;
+}
+.bod-card .content{
+  width: 100%;
+}
+.bod-card .content .name{
+  font-weight: 600;
+  margin-bottom: 2px;
+  font-size: 18px;
+  color: var(--onPrimary);
+}
+.bod-card .content .position{
+  font-weight: bold;
+  font-size: 13px;
+  color: var(--secondary);
+  margin-bottom: 5px;
+}
+
+.bod-card .content .about-bod{
+  text-align: justify;
+  font-size: 10px;
+  color: var(--onPrimary);
+  padding-right: 10px;
+}
+
+.bod-card .avatar img{
+  height: 130px;
+  width: 100px;
+}
+
+
+/*end*/
+.end{
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  color: var(--secondary);
+  font-size: 15px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+
+/*=== Login ===*/
+
+.auth-form {
+  width: 500px;
+  padding: 32px;
+  border-radius: 8px;
+  background-color: var(--primary);
+  border: 2px solid var(--light);
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.auth-form p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.auth-form .header {
+  margin-bottom: 48px;
+}
+
+.auth-form .header h1 {
+  font-weight: bolder;
+  font-size: 28px;
+  color: var(--secondary);
+}
+
+.auth-form .input-group{
+  margin-bottom: 20px;
+}
+.auth-form .input-group input, .auth-form .input-group select {
+  background-color: var(--light);
+  color: var(--onPrimary);
+  font-size: 16px;
+}
+
+
+.auth-form .input-group i {
+  color: var(--secondary);
+  font-size: 16px;
+}
+
+.auth-form input[type="submit"] {
+  width: 100%;
+  border: none;
+  padding: 8px 0;
+  margin: 24px 0;
+  border-radius: 4px;
+  background-color: var(--secondary);
+  color: var(--onSecondary);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.auth-form a {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+
+.auth-form .form-group label{
+  display: flex;
+  justify-content: start;
+  font-size: 14px;
+  color: var(--onPrimary);
+}
+
+
+/*== contact-us ==*/
+.contact-us-title{
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--secondary);
+  margin-bottom: 25px;
+}
+.branch-info{
+  width: 100%;
+}
+.branch-info-card{
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: var(--lightGray);
+}
+
+.branch-info-card .branch-details{
+  width: 60%;
+  height: auto;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.branch-info-card .branch-details .title{
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--onPrimary);
+}
+.branch-info-card .branch-details .sub-title{
+  color: var(--secondary);
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.branch-info-card .branch-details .address{
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.branch-info-card .branch-details .contact{
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+.branch-info-card .branch-image{
+  width: 40%;
+  padding: 5px;
+}
+.branch-info-card .branch-image img{
+  width: 100%;
+  height:170px;
+}
+
+.contact-us-wrapper{
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.contact-us-wrapper .contact-us-form-img{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 37px;
+}
+.contact-us-wrapper .contact-us-form-img img{
+  height: 240px;
+  width: auto;
+}
+
+.contact-form {
+  padding: 30px 40px;
+  border-radius: 12px;
+  width: 100%;
+  padding-top: 0px;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form .form-input,
+.form-text-area {
+  background-color:var(--light);
+  height: 50px;
+  padding-left: 16px;
+}
+
+.contact-form .form-text-area {
+  background-color: var(--light);
+  height: auto;
+  padding-left: 16px;
+}
+
+.contact-form .form-control::placeholder {
+  color: var(--darkGray);
+  font-weight: 500;
+  opacity: 1;
+}
+
+
+.contact-form .form-control:focus {
+  border: none;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.07), 0 0 8px var(--secondary);
+}
+
+.contact-form .title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.contact-form .description {
+  color: var(--darkGray);
+  font-size: 14px;
+  text-align: center;
+}
+
+.contact-form .submit-button-wrapper {
+  text-align: center;
+}
+
+.contact-form .submit-button-wrapper input {
+  border: none;
+  border-radius: 4px;
+  background-color: var(--secondary);
+  color: var(--primary);
+  text-transform: uppercase;
+  padding: 10px 60px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.contact-form .submit-button-wrapper input:hover {
+  background-color: var(--secondary);
+}
+
+
+.contact-us .core-contact{
+  width: 100%;
+  background-color: var(--lightGray);
+  padding: 15px;
+  margin-bottom: 30px;
+  display: flex;
+}
+.core-contact .core-contact-info{
+  width: 50%;
+  font-size: 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.core-contact-info .info-key-value{
+  display: flex;
+  margin-bottom: 10px;
+}
+.core-contact-info .info-key-value:last-child{
+  margin-bottom: 0px;
+}
+.core-contact-info .info-key-value .key{
+  font-weight: 700;
+  color: var(--onPrimary);
+  margin-right: 10px;
+}
+
+.contact-us .core-contact-social{
+  width: 50%;
+}
+.contact-us .core-contact-social img{
+  width: 100%;
+  height: 153px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border: 1px solid var(--light);
 }
