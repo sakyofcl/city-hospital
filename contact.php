@@ -1,3 +1,8 @@
+<?php 
+include_once "./controller/InquirieController.php"; 
+include_once "./util/core.php";
+startSession();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,11 +17,14 @@
       <img src="./assets/image/contact-us-banner.jpg"/>
   </div>
 
-  <div class="container contact-us">
+  <div class="container contact-us mt-3">
 
-    <div class="row mt-5">
+    <div class="row">
       <div class="col-12">
-        <h2 class="contact-us-title">Contact Us</h2>
+        <div class="page-heading">
+          <h2><span class="dot"></span>Contact Us</h2>
+        </div>
+        <?php showSuccess(); ?>
       </div>
       <div class="col-12">
         <div class="core-contact">
@@ -97,17 +105,17 @@
           <div class="contact-us-form-img">
             <img src="./assets/image/contact-us-form.PNG"/>
           </div>
-          <form action="#" class="contact-form">
+          <form action="contact.php" method="POST" class="contact-form" id="contact-form">
             <h5 class="title">Contact From</h5>
             <p class="description">Please contact us for inquiries</p>
             <div>
-              <input type="text" class="form-control rounded border-white mb-3 form-input" id="name" placeholder="Name" required>
+              <input type="text" name="name" class="form-control rounded border-white mb-3 form-input" id="name" placeholder="Name" >
             </div>
             <div>
-              <input type="email" class="form-control rounded border-white mb-3 form-input" placeholder="Email" required>
+              <input type="email" name="email" class="form-control rounded border-white mb-3 form-input" id="email" placeholder="Email" >
             </div>
             <div>
-              <textarea id="message" class="form-control rounded border-white mb-3 form-text-area" rows="5" cols="30" placeholder="Message" required></textarea>
+              <textarea id="message" name="message" class="form-control rounded border-white mb-3 form-text-area" rows="5" cols="30" placeholder="Message" ></textarea>
             </div>
             <div class="submit-button-wrapper">
               <input type="submit" value="Submit" name="contact">
@@ -117,9 +125,37 @@
       </div>
     </div>
   </div>
+
+  <?php
+    if(isset($_POST['contact'])){
+      $InquirieController = new InquirieController();
+      unset($_POST['contact']);
+      $InquirieController->addInquirie($_POST);
+    }
+  ?>
+
   <?php include_once "./end.php"; ?>  
   <?php include_once "./footer.php"; ?>  
   <?php include_once "./script.php"; ?>  
-</body>
+ 
+  <script type="text/javascript">
+    window.onload=()=>{
+      $("#contact-form").validate({
+        rules:{
+          name : "required",
+          email :{required:true, email: true},
+          message : "required"
+        },
+        messages:{
+          name : "required*",
+          message : "required*",
+          email: "invalid email"
+        },
+        errorElement: "div"
 
+      });
+    };
+  </script>
+
+</body>
 </html>

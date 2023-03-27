@@ -40,45 +40,31 @@ body {
   padding-bottom: 90px;
 }
 
-.heading_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.page-heading {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
 }
 
-.heading_container h2 {
+.page-heading h2 {
   font-weight: bold;
   position: relative;
   margin-bottom: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
 }
 
-.heading_container h2 .design_dot {
+.page-heading h2 .dot {
   width: 15px;
   height: 15px;
   border-radius: 100%;
-  background-color: #4bc5b8;
+  background-color: var(--secondary);
   margin-right: 5px;
 }
 
-.heading_container.heading_center {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-}
 
 /*header section*/
 .hero_area {
@@ -107,13 +93,24 @@ body {
 .header_section .nav_container {
   margin: 0 auto;
 }
-
+.app-nav-bar .navbar-nav{
+  height: 100px;
+}
+.app-nav-bar .navbar-nav .nav-item{
+  height: 100%;
+  width: auto;
+}
 .app-nav-bar .navbar-nav .nav-item .nav-link {
-  padding: 45px 15px 15px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--onPrimary);
   text-align: center;
   position: relative;
   text-transform: uppercase;
+  padding:20px;
+
 }
 
 .app-nav-bar .navbar-nav .nav-item:hover .nav-link,
@@ -158,7 +155,7 @@ a:focus {
 }
 
 .navbar-brand h2 {
-  color: var(--onPrimary);
+  color: var(--secondary);
   font-weight: bold;
   text-transform: uppercase;
   margin: 0;
@@ -175,6 +172,11 @@ a:focus {
   z-index: 99999;
   padding: 0;
   border-bottom: 1px solid var(--light);
+}
+
+.app-nav-bar .navbar-brand{
+  margin: 0px;
+  height: 100%;
 }
 
 .app-nav-bar .navbar-toggler {
@@ -232,7 +234,23 @@ a:focus {
           transform: rotate(90deg);
   top: 0;
 }
-
+.app-nav-bar .profile-nav-item{
+  height: 100%;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app-nav-bar .profile-nav-item img{
+  height: 60px;
+  width: auto;
+  border-radius: 50%;
+}
+.app-nav-bar .profile-nav-item img:hover{
+  box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+  height: 65px;
+}
 /*end header section*/
 .slider_section {
   display: -webkit-box;
@@ -412,37 +430,6 @@ a:focus {
   position: relative;
 }
 
-.service_section .box {
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #edf3fa;
-  margin-top: 45px;
-  padding: 25px;
-  border-radius: 5px;
-}
-
-.service_section .box img {
-  max-width: 225px;
-  width: 100%;
-}
-
-.service_section .box a {
-  font-weight: 600;
-  font-size: 24px;
-  margin-top: 15px;
-  color: #000000;
-}
 
 .service_section .btn-box {
   display: -webkit-box;
@@ -593,7 +580,7 @@ a:focus {
   content: "\f106";
 }
 
-.client_section .heading_container {
+.client_section .page-heading {
   margin-bottom: 30px;
 }
 
@@ -781,7 +768,7 @@ a:focus {
 .about-us .about-us-hospital-image{
   height: 450px;
   width: auto;
-  margin-top: 70px;
+  margin-top: 8px;
 }
 
 .about-us .about-us-video{
@@ -1107,4 +1094,211 @@ a:focus {
   height: 153px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   border: 1px solid var(--light);
+}
+
+
+/*==doctors==*/
+.doctors-page {
+  margin-top: 20px;
+}
+.doctors-page .doctor-filter-section{
+  padding: 10px;
+  background-color: var(--light);
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.doctor-filter-section .form-group{
+  margin-bottom: 0px;
+}
+
+.doctor-filter-section input[type="submit"]{
+  width: 100%;
+  border: none;
+  padding: 8px 0;
+  margin: 24px 0;
+  border-radius: 4px;
+  background-color: var(--secondary);
+  color: var(--onSecondary);
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.doctors-page .doctor-listing{
+  margin-top: 30px;
+}
+
+/*doctor card*/
+.doctor-listing .doctor-card{
+  color: var(--onPrimary);
+  background-color: var(--primary);
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 30px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.doctor-card .doctor-card-details{
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+}
+.doctor-card-details .title{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.doctor-card-details .sub-title{
+  color: var(--darkGray);
+  font-size: 16px;
+}
+
+.doctor-card-details .about-description{
+  margin-bottom:10px;
+  line-height: 1.5;
+  text-align: justify;
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; 
+  -webkit-box-orient: vertical;
+}
+
+.doctor-card-details .contact{
+  margin-bottom:20px;
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+.doctor-card-details .contact-doctor{
+  transition: 180ms ease-in;
+  color: var(--onSecondary);
+  background-color: var(--secondary);
+  border: 0;
+  cursor: pointer;
+  padding: 16px;
+}
+
+.doctor-card .doctor-card-profile{
+  width: 100%;
+  height: 100%;
+}
+
+.doctor-card .doctor-card-profile img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/*== service ==*/
+.service .box {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary);
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  height: 520px;
+  margin-bottom: 30px;
+}
+
+.service .box img {
+  max-width: 225px;
+  width: 100%;
+}
+
+.service .box a {
+  font-weight: 600;
+  font-size: 24px;
+  margin-top: 15px;
+  color:var(--onPrimary);
+  margin-bottom: 10px;
+}
+.service .box p{
+  text-align: justify;
+  font-size: 15px;
+}
+
+
+/*==error ==*/
+.error{
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px!important;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+}
+
+/*show-hide-eye*/
+.show-hide-eye{
+  position: relative;
+}
+.show-hide-eye i{
+  position: absolute;
+  top: 32px;
+  right: 0px;
+  color: var(--secondary);
+  font-weight: bold;
+  cursor: pointer;
+}
+.show-hide-eye input{
+  padding-right: 40px;
+}
+
+
+/*profile-section*/
+.profile-section{
+  display: flex;
+  justify-content: space-between;
+}
+.profile-section img{
+  width: 150px;
+  height: 150px;
+  margin-top: -75px;
+
+}
+.profile-section .perfile-details{
+  padding: 20px;
+}
+.profile-section .perfile-details .name{
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--secondary);
+  letter-spacing: 1;
+}
+.profile-section .perfile-details .type{
+  font-size: 15px;
+  color: var(--darkGray);
+  letter-spacing: 1;
+}
+
+
+.app-nav-tabs{
+  margin-bottom: 20px;
+  border:none;
+  margin-top: 30px;
+}
+.app-nav-tabs .nav-link{
+  border-radius: 0px;
+  background-color: var(--primary);
+  color: var(--onPrimary);
+}
+.app-nav-tabs .nav-link.active{
+  background-color: var(--secondary);
+  color: var(--onSecondary);
+}
+
+.app-nav-content{
+  padding: 19px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }

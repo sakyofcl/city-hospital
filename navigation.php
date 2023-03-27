@@ -1,9 +1,13 @@
+<?php 
+include_once "./util/core.php";
+?>
+
 <header class="header_section">
-  <div class="container">
+  <div class="container-fluid pl-5 pr-5">
     <nav class="navbar navbar-expand-lg app-nav-bar custom_nav-container">
 
       <a class="navbar-brand d-flex flex-row align-items-center" href="index.php">
-        <h2 class="mt-4"> CITY HOSPITAL </h2> 
+        <h2> CITY HOSPITAL </h2> 
       </a>
       
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,10 +35,30 @@
               <li class="nav-item">
                 <a class="nav-link" href="contact.php"> Contact Us </a>
               </li>
+              
+              <?php
+                if(isLogin()){
+                  echo "
+                    <li class='nav-item'>
+                      <a class='nav-link text-danger font-weight-bold' href='logout.php'> Logout </a>
+                    </li>
 
-              <li class="nav-item">
-                <a class="nav-link" href="register.php"> Register/Login </a>
-              </li>
+                    <div class='profile-nav-item'>
+                      <a href='profile.php'>
+                        <img src='./assets/image/default-profile-icon.png'/> 
+                      </a>
+                    </div>
+                  ";
+                }
+                else{
+                  echo "
+                    <li class='nav-item'>
+                      <a class='nav-link' href='login.php'> Login </a>
+                    </li>
+                  ";
+                }
+              ?>
+
             </ul>
           </div>
 

@@ -1,3 +1,7 @@
+<?php 
+include_once "./util/core.php";
+startSession();
+?>
 <!DOCTYPE html>
 <html>
 <head>

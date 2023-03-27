@@ -13,12 +13,18 @@ class CityHospitalDbContext{
     
     public function rawSql($query){
         $result = mysqli_query($this->_context, $query);
+        return $result;
+    }
 
-        if($result->num_rows > 0){
-            return $result->fetch_assoc();
+    public function Read($query){
+        $result = $this->rawSql($query);
+        $data = [];
+        if($result->num_rows != 0){
+            while($row = $result->fetch_assoc()) {
+                $data[] = $row;
+            }
         }
-        
-        return [];
+        return $data;
     }
 
     private function _extractConnectionString($connectionString){
