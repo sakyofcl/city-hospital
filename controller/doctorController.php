@@ -16,6 +16,16 @@ class DoctorController{
     public function BookPatient($patientBook){
         return $this->_uow->Doctor->BookPatient($patientBook);
     }
+
+    public function approveBooking($id){
+        return $this->_uow->Doctor->approveBooking($id);
+    }
+
+    public function getDoctorDetails($id){
+        return $this->_uow->Doctor->getDoctorDetails($id);
+    }
+
+
 }
 
 ?>

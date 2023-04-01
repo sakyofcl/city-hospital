@@ -164,7 +164,7 @@ a:focus {
 .navbar-brand span {
   font-size: 16px;
   font-weight: bold;
-  color: #56bca4;
+  color: #004585;
   margin-top: -10px;
 }
 
@@ -280,7 +280,7 @@ a:focus {
   font-size: 3rem;
   font-weight: bold;
   text-transform: uppercase;
-  color: #2a695a;
+  color: var(--secondary);
 }
 
 .slider_section .detail-box p {
@@ -290,15 +290,15 @@ a:focus {
 .slider_section .detail-box a {
   display: inline-block;
   padding: 10px 45px;
-  background-color: #56bca4;
-  border: 1px solid #56bca4;
+  background-color: #004585;
+  border: 1px solid #004585;
   color: #ffffff;
   margin-top: 15px;
 }
 
 .slider_section .detail-box a:hover {
   background-color: transparent;
-  color: #56bca4;
+  color: #004585;
 }
 
 .slider_section .img-box img {
@@ -324,12 +324,12 @@ a:focus {
 .slider_section #carouselExampleIndicators li.active {
   width: 12px;
   height: 12px;
-  border-color: #56bca4;
+  border-color: #004585;
 }
 
 .special_section .special_container {
-  color: #ffffff;
-  background-color: #56bca4;
+  color: var(--onSecondary);
+  background-color: var(--secondary);
   padding: 25px;
   margin-top: -97.5px;
 }
@@ -362,14 +362,14 @@ a:focus {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 15px;
-  background-color: #ffffff;
+  background-color: var(--primary);
   border-radius: 100%;
 }
 
 .special_section .special_container .box .img-box svg {
   width: 50px;
   height: auto;
-  fill: #317b6a;
+  fill: var(--secondary);
 }
 
 .special_section .special_container .box .detail-box h4 {
@@ -380,13 +380,13 @@ a:focus {
 
 .special_section .special_container .box .detail-box a {
   display: inline-block;
-  color: #ffffff;
+  color: var(--primary);
   margin-top: 10px;
 }
 
 .special_section .special_container .box.b2 {
-  border-left: 1px solid #ffffff;
-  border-right: 1px solid #ffffff;
+  border-left: 1px solid var(--primary);
+  border-right: 1px solid var(--primary);
 }
 
 .about_section {
@@ -415,15 +415,15 @@ a:focus {
 .about_section .detail-box a {
   display: inline-block;
   padding: 10px 45px;
-  background-color: #56bca4;
-  border: 1px solid #56bca4;
+  background-color: var(--secondary);
+  border: 1px solid var(--secondary);
   color: #ffffff;
   margin-top: 15px;
 }
 
 .about_section .detail-box a:hover {
   background-color: transparent;
-  color: #56bca4;
+  color: var(--secondary);
 }
 
 .service_section {
@@ -443,15 +443,15 @@ a:focus {
 .service_section .btn-box a {
   display: inline-block;
   padding: 8px 45px;
-  background-color: #56bca4;
-  border: 1px solid #56bca4;
-  color: #ffffff;
+  background-color: var(--secondary);
+  border: 1px solid var(--secondary);
+  color: var(--primary);
   margin-top: 45px;
 }
 
 .service_section .btn-box a:hover {
   background-color: transparent;
-  color: #56bca4;
+  color: var(--secondary);
 }
 
 .book_section {
@@ -484,7 +484,7 @@ a:focus {
   width: 15px;
   height: 15px;
   border-radius: 100%;
-  background-color: #4bc5b8;
+  background-color: var(--secondary);
   margin-right: 5px;
 }
 
@@ -523,7 +523,7 @@ a:focus {
 }
 
 .book_section form #inputDate {
-  color: #56bca4;
+  color: #004585;
 }
 
 .book_section form #inputDate input {
@@ -554,7 +554,7 @@ a:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #56bca4;
+  color: #004585;
 }
 
 .book_section .nice-select {
@@ -590,7 +590,7 @@ a:focus {
           box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.05);
   padding: 25px;
   text-align: center;
-  background-color: #56bca4;
+  background-color: #004585;
   color: #ffffff;
 }
 
@@ -630,7 +630,7 @@ a:focus {
 .client_section .carousel-control-next {
   width: 55px;
   height: 55px;
-  background-color: #35806e;
+  background-color: var(--secondary);
   opacity: 1;
   font-size: 28px;
   font-weight: bold;
@@ -1148,6 +1148,9 @@ a:focus {
 .doctor-card-details .title{
   font-size: 1.5rem;
   font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .doctor-card-details .sub-title{

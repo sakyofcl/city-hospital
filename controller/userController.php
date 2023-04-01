@@ -9,6 +9,18 @@ class UserController{
     {
         $this->_uow = new Uow();
     }
+
+    public function GetAllUser(){
+        return $this->_uow->User->GetAllUser();
+    }
+
+    public function GetUser($id){
+        return $this->_uow->User->GetUser($id);
+    }
+
+    public function DeleteUser($id){
+        $this->_uow->User->DeleteUser($id);
+    }
     
     public function addUser($user){
         $isSave = $this->_uow->User->AddUser($user);
@@ -25,14 +37,29 @@ class UserController{
         return $isSave;
     }
 
+    public function updateUser($user){
+        return $this->_uow->User->updateUser($user);
+    }
+
+
+    public function updateDoctorDetails($details){
+        $this->_uow->User->UpdateDoctorDetail($details);
+    } 
+
     public function loginUser($user){
         $result = $this->_uow->User->LoginUser($user);
         $isLogin = !empty($result);
         if($isLogin){
-            $_SESSION["user"] = $result;
-            $_SESSION["userType"] = $result['type'];
+            $_SESSION["user"] = $result[0];
+            $_SESSION["userType"] = $result[0]['type'];
             $_SESSION["isLogin"] = true;
-            header("Location: index.php");
+            
+            if(UserType::$Admin == $_SESSION["userType"]){
+                header("Location: admin.php");    
+            }
+            else{
+                header("Location: index.php");
+            }
             exit;
         }
         else{

@@ -1,5 +1,4 @@
 <?php
-
 class CityHospitalDbContext{
     private $_context;
     

@@ -72,18 +72,15 @@ startSession();
               $user = new UserController();
               $doctorData = $user->GetFilteredDoctors( isset($_GET['filter']) ? $_GET : [] );
               foreach($doctorData as $item){
-                $bookingButton = isLogin() && isPatient() ? "<a href='booking.php?doctorId={$item['uid']}&patientId=49&treatmentType={$item['treatmentType']}' class='contact-doctor text-white text-center'>Add Booking</a>" : "";
+                $bookingButton = isLogin() && isPatient() ? "<a href='booking.php?doctorId={$item['uid']}&patientId={$_SESSION['user']['id']}&treatmentType={$item['treatmentType']}' class='contact-doctor text-white text-center'>Add Booking</a>" : "";
                 echo "
                   <div class='col-md-4'>
-                    <div class='doctor-card'>
-                      <div class='doctor-card-profile'>
-                        <img src='https://images.pexels.com/photos/802112/pexels-photo-802112.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1'/>
-                      </div>
+                    <div class='doctor-card bg-light border'>
                       <div class='doctor-card-details'>
                         <h3 class='title'>{$item['title']}</h3>
-                        <p class='sub-title'>{$item['treatmentType']}</p>
+                        <p class='sub-title text-dark'>{$item['treatmentType']}</p>
                         <p class='about-description'>{$item['bio']}</p>
-                        <p class='contact'>{$item['email']}</p>
+                        <p class='contact'>{$item['email']} | {$item['phone']}</p>
                         $bookingButton
                       </div>
                     </div>

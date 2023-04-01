@@ -17,15 +17,36 @@ auth();
       <img src="./assets/image/profile-banner.jpg"/>
   </div>
   <div class="container profile-section">
-    <img src="./assets/image/default-profile-icon.png"/>
+    <?php
+      if(isPatient()){
+        echo "<img src='./assets/image/default-profile-icon.png'/>";
+      }
+      else if(isDoctor()){
+        echo "<img src='./assets/image/doctor-profile.PNG'/>";
+      }
+    ?>
     <div class="perfile-details">
-        <div class="name">Mohamed sakeen</div>
-        <div class="type">Doctor</div>
+        <div class="name"><?php echo $_SESSION['user']['userName'];?></div>
+        <div class="type">
+          <?php
+            if(isPatient()){
+              echo "Patient";
+            }
+            else if(isDoctor()){
+              echo "Doctor";
+            }
+          ?>
+        </div>
     </div>
   </div>
-
-  <?php include_once "./patient.profile.php"; ?>
-  
+  <?php
+    if(isPatient()){
+      include_once "./patient.profile.php";
+    }
+    else if(isDoctor()){
+      include_once "./doctor.profile.php";
+    }
+  ?>
   <?php include_once "./end.php"; ?>  
   <?php include_once "./footer.php"; ?>  
   <?php include_once "./script.php"; ?>  

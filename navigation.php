@@ -38,6 +38,10 @@ include_once "./util/core.php";
               
               <?php
                 if(isLogin()){
+                  $iconSource = './assets/image/default-profile-icon.png';
+                  if(isDoctor()){
+                    $iconSource = "./assets/image/doctor-profile.PNG";
+                  }
                   echo "
                     <li class='nav-item'>
                       <a class='nav-link text-danger font-weight-bold' href='logout.php'> Logout </a>
@@ -45,7 +49,7 @@ include_once "./util/core.php";
 
                     <div class='profile-nav-item'>
                       <a href='profile.php'>
-                        <img src='./assets/image/default-profile-icon.png'/> 
+                        <img src='$iconSource'/> 
                       </a>
                     </div>
                   ";

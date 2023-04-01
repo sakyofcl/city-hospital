@@ -10,7 +10,7 @@ startSession();
 </head>
 
 <body>
-  <div class="hero_area">
+  <div class="hero_area bg-white">
     <?php include_once "./navigation.php"; ?> 
     <!-- slider section -->
     <section class=" slider_section position-relative">
@@ -23,10 +23,10 @@ startSession();
                   <div class="detail-box">
                     <div>
                       <h1>
-                        health care
+                      Speech therapy 
                       </h1>
                       <p>
-                        Excepturi quam cum ex, expedita inventore adipisci reprehenderit incidunt doloribus delectus quod, placeat nulla culpa nemo, mollitia natus! Beatae illo quas nemo omnis ullam placeat, obcaecati ducimus rem id. Consectetur.
+                      Speech therapy is a healthcare service that aims to improve communication and speech-related issues in individuals of all ages. it's also known as speech-language pathologists, work with people who have difficulties with speech, language, voice, fluency, and swallowing
                       </p>
                       <a href="">
                         Read More
@@ -36,7 +36,7 @@ startSession();
                 </div>
                 <div class="col-md-6">
                   <div class="img-box">
-                    <img src="images/slider-img.png" alt="">
+                    <img src="./assets/image/slider-img-3.jpg" alt="">
                   </div>
                 </div>
               </div>
@@ -49,10 +49,10 @@ startSession();
                   <div class="detail-box">
                     <div>
                       <h1>
-                        health care
+                      Digital X-ray Service
                       </h1>
                       <p>
-                        Excepturi quam cum ex, expedita inventore adipisci reprehenderit incidunt doloribus delectus quod, placeat nulla culpa nemo, mollitia natus! Beatae illo quas nemo omnis ullam placeat, obcaecati ducimus rem id. Consectetur.
+                      Digital X-ray is a modern diagnostic imaging technology that uses digital sensors instead of traditional photographic film to capture and create images of the human body. it's help healthcare providers make accurate diagnoses and provide effective treatment.
                       </p>
                       <a href="">
                         Read More
@@ -62,7 +62,7 @@ startSession();
                 </div>
                 <div class="col-md-6">
                   <div class="img-box">
-                    <img src="images/slider-img.png" alt="">
+                    <img src="./assets/image/slider-img-2.jpg" alt="">
                   </div>
                 </div>
               </div>
@@ -75,10 +75,10 @@ startSession();
                   <div class="detail-box">
                     <div>
                       <h1>
-                        health care
+                      Dental Clinic Service
                       </h1>
                       <p>
-                        Excepturi quam cum ex, expedita inventore adipisci reprehenderit incidunt doloribus delectus quod, placeat nulla culpa nemo, mollitia natus! Beatae illo quas nemo omnis ullam placeat, obcaecati ducimus rem id. Consectetur.
+                      A dental clinic is a healthcare facility that provides dental care services to patients. Dental clinics typically offer a wide range of services, including routine check-ups, cleanings, fillings, extractions, root canals, crowns, bridges, and other dental procedures.
                       </p>
                       <a href="">
                         Read More
@@ -88,7 +88,7 @@ startSession();
                 </div>
                 <div class="col-md-6">
                   <div class="img-box">
-                    <img src="images/slider-img.png" alt="">
+                    <img src="./assets/image/slider-img-1.jpg" alt="">
                   </div>
                 </div>
               </div>
@@ -107,7 +107,7 @@ startSession();
 
   <!-- special section -->
 
-  <section class="special_section">
+  <section class="special_section ">
     <div class="container">
       <div class="special_container">
         <div class="row">
@@ -324,11 +324,8 @@ startSession();
               </div>
               <div class="detail-box">
                 <h4>
-                  ADVANCED TECHNOLOGY
+                  HIGH QUALITY CARE
                 </h4>
-                <a href="">
-                  Read More
-                </a>
               </div>
             </div>
           </div>
@@ -349,9 +346,6 @@ startSession();
                 <h4>
                   24/7 AVAILABILITY
                 </h4>
-                <a href="">
-                  Read More
-                </a>
               </div>
             </div>
           </div>
@@ -370,11 +364,8 @@ startSession();
               </div>
               <div class="detail-box">
                 <h4>
-                  Best Doctors
+                  EXPERIENCED DOCTORS
                 </h4>
-                <a href="">
-                  Read More
-                </a>
               </div>
             </div>
           </div>
@@ -386,12 +377,12 @@ startSession();
   <!-- end special section -->
 
   <!-- about section -->
-  <section class="about_section layout_padding">
+  <section class="about_section layout_padding bg-light">
     <div class="container">
       <div class="heading_container heading_center">
         <h2>
           <span class="design_dot"></span>
-          About Our Hospital
+          About City Hospital
         </h2>
       </div>
       <div class="col-md-7 mx-auto px-0">
@@ -400,14 +391,11 @@ startSession();
         </div>
       </div>
       <div class="col-md-9 mx-auto px-0">
-        <div class="detail-box">
+        <div class="detail-box text-justify">
           <p>
-            Esse sed doloribus error ad laborum dolorem nobis? Cum, culpa? Distinctio natus excepturi fugit eveniet quasi animi ab obcaecati laudantium sit, ratione recusandae accusamus, voluptatum iste placeat. Esse, eos cumque.
-            Culpa nesciunt quia qui possimus eveniet dolore a debitis consectetur quod. Eligendi recusandae placeat soluta
+          City Hospitalhas been a trusted name in Sri Lankan healthcare for more than seven Decades. Since our foundation in 1946, we have built a reputation for regional leadership in medical excellence and innovation, based on a simple philosophy: that improving the health of our community should be driven by passion as well as compassion. City Hospitaloffers 260 beds  including 60 in our critical care department  across a range of spacious, modern rooms. We offer the best consultants, specialists and employees, all of whom are dedicated to providing exceptional clinical outcomes and utmost customer satisfaction. With cutting-edge technology, we have evolved into a world-class tertiary care institute. Our facilities include an ultramodern theatre complex comprising eight theatres and state-of-the-art intensive care units (ICUs). We also offer a modern radiology unit, fully equipped physiotherapy unit and two catheterisation laboratories.
           </p>
-          <a href="">
-            Read More
-          </a>
+
         </div>
       </div>
     </div>
@@ -417,137 +405,101 @@ startSession();
 
   <!-- service section -->
 
-  <section class="service_section layout_padding-bottom">
+  <section class="service_section">
     <div class="container">
       <div class="heading_container heading_center">
-        <h2>
+        <h2 class="mb-5 pt-4">
           <span class="design_dot"></span>
           Our Services
         </h2>
-        <p>
-          It is a long established fact that a reader will be distracted
-        </p>
-      </div>
-      <div class="row">
-        <div class="col-md-2">
 
-        </div>
-        <div class="col-md-4 mx-auto">
-          <div class="box">
-            <img src="images/s1.png" alt="" />
-            <a href="#">
-              Cardiology
-            </a>
-          </div>
-        </div>
-        <div class="col-md-4 mx-auto">
-          <div class="box">
-            <img src="images/s2.png" alt="" />
-            <a href="#">
-              Diagnosis
-            </a>
-          </div>
-        </div>
-        <div class="col-md-2">
+        <div class="service">
+          <div class="col-12">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="box">
+                  <img src="./assets/image/diabetic-service.jpg"/>
+                  <a href="#">
+                    Diabetic wound Care
+                  </a>
+                  <p>
+                    Diabetic wound care is a specialized healthcare service that focuses on the prevention and treatment of wounds in individuals with diabetes. 
+                    Effective diabetic wound care is critical for preventing serious complications and improving the quality of life for individuals with diabetes.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="box">
+                  <img src="./assets/image/eye-surgery.jpg"/>
+                  <a href="#">
+                    Eye Surgery
+                  </a>
+                  <p>
+                    Eye surgery, also known as ocular surgery, is a surgical procedure that aims to correct or improve various eye conditions, including refractive errors, cataracts, glaucoma, and other eye disorders. 
+                    Eye surgery is typically performed by an ophthalmologist.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="box">
+                  <img src="./assets/image/dental-service.jpg"/>
+                  <a href="#">
+                    Dental Clinic
+                  </a>
+                  <p>
+                  A dental clinic is a healthcare facility that provides dental care services to patients. Dental clinics typically offer a wide range of services, including routine check-ups, cleanings, fillings, extractions, root canals, crowns, bridges, and other dental procedures.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="box">
+                  <img src="./assets/image/speech-thrapy.jpg"/>
+                  <a href="#">
+                    Speech Therapy
+                  </a>
+                  <p>
+                    Speech therapy is a healthcare service that aims to improve communication and speech-related issues in individuals of all ages.
+                    it's also known as speech-language pathologists, work with people who have difficulties with speech, language, voice, fluency, and swallowing
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="box">
+                  <img src="./assets/image/echo-service.jpg"/>
+                  <a href="#">
+                    Echo Cardio Services
+                  </a>
+                  <p>
+                    Echo Cardio Services, also known as echocardiography, is a diagnostic imaging technology that uses ultrasound waves to create detailed images of the heart and its surrounding structures.
+                    Echo Cardio Services is a non-invasive and safe procedure.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="box">
+                  <img src="./assets/image/digital-xray.jpg"/>
+                  <a href="#">
+                    Digital X-ray
+                  </a>
+                  <p>
+                    Digital X-ray is a modern diagnostic imaging technology that uses digital sensors instead of traditional photographic film to capture and create images of the human body.
+                    it's help healthcare providers make accurate diagnoses and provide effective treatment.
+                  </p>
+                </div>
+              </div>
 
-        </div>
-        <div class="col-md-4 mx-auto">
-          <div class="box">
-            <img src="images/s3.png" alt="" />
-            <a href="#">
-              Surgery
-            </a>
+              
+
+            </div>
           </div>
         </div>
-        <div class="col-md-4 mx-auto">
-          <div class="box">
-            <img src="images/s4.png" alt="" />
-            <a href="#">
-              First Aid
-            </a>
-          </div>
-        </div>
-        <div class="col-md-4 mx-auto">
-          <div class="box">
-            <img src="images/s5.png" alt="" />
-            <a href="#">
-              Therapy
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="btn-box">
-        <a href="">
-          View All
-        </a>
+
       </div>
     </div>
   </section>
 
   <!-- end service section -->
 
-  <!-- book section -->
-
-  <section class="book_section layout_padding">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <form>
-            <h4>
-              <span class="design_dot"></span>
-              BOOK APPOINTMENT
-            </h4>
-            <div class="form-row ">
-              <div class="form-group col-lg-4">
-                <label for="inputPatientName">Patient Name </label>
-                <input type="text" class="form-control" id="inputPatientName" placeholder="">
-              </div>
-              <div class="form-group col-lg-4">
-                <label for="inputDoctorName">Doctor's Name</label>
-                <select name="" class="form-control wide" id="inputDoctorName">
-                  <option value="Normal distribution ">Doctor Name 1</option>
-                  <option value="Normal distribution ">Doctor Name 2 </option>
-                  <option value="Normal distribution ">Doctor Name 3 </option>
-                </select>
-              </div>
-              <div class="form-group col-lg-4">
-                <label for="inputDepartmentName">Department's Name</label>
-                <select name="" class="form-control wide" id="inputDepartmentName">
-                  <option value="Normal distribution ">Cardiology </option>
-                  <option value="Normal distribution ">Surgery </option>
-                  <option value="Normal distribution ">First Aid </option>
-                </select>
-              </div>
-            </div>
-            <div class="form-row ">
-              <div class="form-group col-lg-4">
-                <label for="inputPhone">Phone Number</label>
-                <input type="text" class="form-control" id="inputPhone" placeholder="">
-              </div>
-              <div class="form-group col-lg-4">
-                <label for="inputSymptoms">Symptoms</label>
-                <input type="text" class="form-control" id="inputSymptoms" placeholder="">
-              </div>
-              <div class="form-group col-lg-4">
-                <label for="inputDate">Choose Date </label>
-                <div class="input-group date" id="inputDate" data-date-format="mm-dd-yyyy">
-                  <input type="text" class="form-control" readonly>
-                  <span class="input-group-addon date_icon">
-                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="btn-box">
-              <button type="submit" class="btn ">Submit Now</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end book section -->
 
   <!-- client section -->
   <section class="client_section layout_padding">
@@ -555,7 +507,7 @@ startSession();
       <div class="heading_container heading_center">
         <h2>
           <span class="design_dot"></span>
-          Testimonial
+          Patients Heartfull Messages
         </h2>
       </div>
     </div>
@@ -567,16 +519,16 @@ startSession();
               <div class="client_info">
                 <div class="client_name">
                   <h5>
-                    Clark Norris
+                    Fathimah Askara
                   </h5>
                   <h6>
-                    Default model text
+                    Eye Surgery
                   </h6>
                 </div>
                 <i class="fa fa-quote-left" aria-hidden="true"></i>
               </div>
               <p>
-                editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various
+                I am writing to express my gratitude from my family for the care given to my mother. In the City Hospital there was care, compassion, and respect. A special thank you to your social workers as well; they provided professional guidance, comfort, and strength to make our own decisions. Finally, I cannot praise the Palliative Care and Hospice team enough. They were patient and helpful. All our hope that you continue along this path.
               </p>
             </div>
           </div>
@@ -585,16 +537,16 @@ startSession();
               <div class="client_info">
                 <div class="client_name">
                   <h5>
-                    Chris Jonas
+                    Rameash Krishna
                   </h5>
                   <h6>
-                    Default model text
+                    Diabetic wound Care
                   </h6>
                 </div>
                 <i class="fa fa-quote-left" aria-hidden="true"></i>
               </div>
               <p>
-                Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+                I am writing on behalf of my brother who was a patient in your hospital. I would like to thank you on behalf of my entire family for the help and consideration shown to me in what was a very difficult time. Again, I would like to thank you for the services you provide to patients and their families.
               </p>
             </div>
           </div>
@@ -603,16 +555,16 @@ startSession();
               <div class="client_info">
                 <div class="client_name">
                   <h5>
-                    Brad Johns
+                    Mohamed sakeen
                   </h5>
                   <h6>
-                    Default model text
+                    Speech Therapy
                   </h6>
                 </div>
                 <i class="fa fa-quote-left" aria-hidden="true"></i>
               </div>
               <p>
-                Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy, editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various
+                I recently had a nine day stay at City Hospital and I wanted to express how impressed I was with the level of care I received from everyone I encountered. The Trauma Center saved my life! I found it amazing and I am grateful that it services my community.
               </p>
             </div>
           </div>
@@ -636,7 +588,15 @@ startSession();
 
   <section class="map_section">
     <div class="map">
-      <div id="googleMap"></div>
+      <div id="googleMap">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.0079047807003!2d79.87352081525131!3d6.889655620708483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25a2d3e1a1f1b%3A0xe505e16b84fb506e!2sLanka%20Hospitals!5e0!3m2!1sen!2slk!4v1680200620689!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 

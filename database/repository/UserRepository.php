@@ -12,16 +12,16 @@ class UserRepository extends AbstractRepository{
     }
 
     public function GetAllUser(){
-        return $this->_context->rawSql("SELECT * FROM users");
+        return $this->_context->Read("SELECT * FROM user ORDER BY id DESC;");
     }
 
     public function GetUser($id=null){
         $q = "SELECT * FROM user ";
-        if(isset($id)){
-            $q.="WHERE id=$id ;";
+        if(!is_null($id)){
+            $q.="WHERE id=$id LIMIT 1;";
         }
         else{
-            $q.= "ORDER BY id DESC LIMIT 1 ;";
+            $q.= "ORDER BY id DESC;";
         }
         return $this->_context->Read($q);
     }
@@ -53,10 +53,38 @@ class UserRepository extends AbstractRepository{
         return $this->_context->rawSql($q);
     }
 
+    public function DeleteUser($id){
+        $user = $this->GetUser($id)[0];
+        $this->_context->rawSql("DELETE FROM user WHERE id=$id;");
+        
+        if(UserType::$Doctor == (int)$user['type']){
+            $this->_context->rawSql("DELETE FROM doctordetail WHERE uid=$id;");
+            $this->_context->rawSql("DELETE FROM patientbooking WHERE doctorId=$id;");
+        }
+        else{
+            $this->_context->rawSql("DELETE FROM patientdetail WHERE uid=$id;");
+            $this->_context->rawSql("DELETE FROM patientbooking WHERE patientId=$id;");
+        }
+        
+    }
+
+    
+    public function UpdateUser($user){
+        $entity = $this->ToEntity($user);
+        $q = updateQuery($entity);
+        return $this->_context->rawSql($q);
+    }
+
 
     public function AddDoctorDetail($detail){
         $entity = $this->ToDoctorDetailsEntity($detail);
         $q = insertQuery($entity);
+        return $this->_context->rawSql($q);
+    }
+
+    public function UpdateDoctorDetail($detail){
+        $entity = $this->ToDoctorDetailsEntity($detail);
+        $q = updateQuery($entity);
         return $this->_context->rawSql($q);
     }
 
@@ -88,15 +116,14 @@ class UserRepository extends AbstractRepository{
     private function ToDoctorDetailsEntity($source){
         $entity = new DoctorDetail();
         $entity->id = !isset($source['id']) ? NULL : (int)$source['id'];
-        $entity->uid = $source['uid'];
-        $entity->branch = !isset($source['branch']) ? NULL : $source['branch'];
-        $entity->treatmentType = !isset($source['treatmentType']) ? NULL : $source['treatmentType'];
-        $entity->title = !isset($source['title']) ? NULL : $source['title'];
-        $entity->bio = !isset($source['bio']) ? NULL : $source['bio'];
-        $entity->profile = !isset($source['profile']) ? NULL : $source['profile'];
-        $entity->email = !isset($source['email']) ? NULL : $source['email'];
-        $entity->phone = !isset($source['phone']) ? NULL : $source['phone'];
-        $entity->create_at = !isset($source['create_at']) ? NULL : $source['create_at'];
+        $entity->uid = (int)$source['uid'];
+        $entity->branch = empty($source['branch']) ? NULL : $source['branch'];
+        $entity->treatmentType = empty($source['treatmentType']) ? NULL : $source['treatmentType'];
+        $entity->title = empty($source['title']) ? NULL : $source['title'];
+        $entity->bio = empty($source['bio']) ? NULL : $source['bio'];
+        $entity->email = empty($source['email']) ? NULL : $source['email'];
+        $entity->phone = empty($source['phone']) ? NULL : (int)$source['phone'];
+        $entity->create_at = empty($source['create_at']) ? NULL : $source['create_at'];
         return $entity;
     }
 

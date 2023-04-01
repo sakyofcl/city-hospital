@@ -7,7 +7,6 @@ class DoctorDetail{
     public $uid;
     public $title;
     public $bio;
-    public $profile;
     public $email;
     public $phone;
     public $create_at;
